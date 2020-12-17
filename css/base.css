@@ -1,0 +1,306 @@
+﻿@charset "UTF-8";
+
+/*=====================================ヘッダー*/
+
+.hed {
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:10000;
+}
+
+@media screen and (max-width:787px) {
+    /*画面幅が787pxまでの時*/
+    .hed {
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    /*画面幅が788px以上の時*/
+    .hed {
+        font-size: 1.75rem;
+    }
+}
+.nav-icon{
+    font-size:30px;
+}
+
+#nav-full{
+    position:relative;
+}
+
+.nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/*=================================================-ヘッダー終わり*/
+
+
+/*ページの一番上に飛ぶ矢印の定義（試験的）*/
+.goto-top{
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin:20px;
+    z-index:100;
+}
+.goto-top-content{
+    width:40px;
+    height:40px;
+    font-size:40px;
+}
+
+/*=============================================ラッパー============================================================*/
+
+/*コンテンツを中央寄せにし、なおかつmaxの幅を制御する*/
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(100ch, 100%)/*要素の幅をフォント100文字ぶんの幅で定義。画面がそれより小さければそっちが優先*/
+    1fr;
+}
+.wrapper > * {
+  grid-column: 2;
+}
+.wrapper-wide {
+    display: grid;
+    grid-template-columns:
+      1fr
+      min(150ch, 100%)
+      1fr;
+}
+.wrapper-wide > * {
+grid-column: 2;
+}
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+/*===========================================ラッパー終わり==============================================================*/
+
+body {
+    background-color: #f0f0f0;
+}
+body p{
+    margin:2px;
+    font-size:18px;
+}
+@media screen and (max-width:480px) {
+    /*画面幅が480pxまでの時*/
+    #DTM-link-embed {
+        margin: 0px;
+    }
+}
+
+@media screen and (min-width:781px) {
+    /*画面幅が781px以上の時*/
+    #dTM-link-embed {
+        margin: 35px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.card p {
+    margin: 1px;
+    font-size: 14px;
+}
+#cg-works img,
+#prog-works img,
+#introduction-content img{
+    width: 100%;
+}
+
+/*=============================================================*/
+#dtm-introduction h3,
+#dtm-schedule h3,
+#dtm-works h3,
+#prog-introduction h3,
+#prog-schedule h3,
+#prog-works h3 ,
+#cg-introduction h3,
+#cg-schedule h3,
+#cg-works h3,
+#main-schedule h3{
+    background-color: #8d8d8d;
+    color: white;
+    margin-top: 20px;
+    border-radius: 3px;
+    border-left:solid 10px;
+    padding: 0.5em;
+}
+
+#dtm-introduction h3,
+#dtm-schedule h3,
+#dtm-works h3 {
+    border-left-color: #c92525;
+}
+
+#prog-introduction h3,
+#prog-schedule h3,
+#prog-works h3 {
+    border-left-color: #253ec9;
+}
+
+#cg-introduction h3,
+#cg-schedule h3,
+#cg-works h3{
+    border-left-color: #25c92d;
+}
+
+#main-schedule h3 {
+    border-left-color: black;
+}
+
+/*========================ジャンボトロン=====================================*/
+
+#cg-jumbo,
+#dtm-jumbo,
+#prog-jumbo{
+    background-color:rgba(0,0,0,0.5);
+    background-size: cover;
+    background-position: center 60%;
+    background-blend-mode:darken;
+}
+#cg-jumbo {
+    background-image: url("../images/cg/works-thumbnail.png");
+}
+#dtm-jumbo {
+    background-image: url("../images/dtm/works-thumbnail.png");
+}
+#prog-jumbo {
+    background-image: url("../images/prog/works-thumbnail.png");
+}
+
+#cg-jumbo h1,
+#cg-jumbo p,
+#dtm-jumbo h1,
+#dtm-jumbo p,
+#prog-jumbo h1,
+#prog-jumbo p{
+    color: white;
+}
+
+#main-cg-jumbo,
+#main-dtm-jumbo,
+#main-prog-jumbo{
+    background-color:rgba(0,0,0,0.5);
+    background-size: cover;
+    background-position: center 60%;
+    background-blend-mode:darken;
+}
+
+#main-cg-jumbo {
+    background-image: url("../images/CG-card.png");
+}
+#main-dtm-jumbo {
+    background-image: url("../images/DTM-card.png");
+}
+#main-prog-jumbo {
+    background-image: url("../images/prog-card.png");
+}
+#main-cg-jumbo h1,
+#main-cg-jumbo h4,
+#main-cg-jumbo p,
+#main-dtm-jumbo h1,
+#main-dtm-jumbo h4,
+#main-dtm-jumbo p,
+#main-prog-jumbo h1,
+#main-prog-jumbo h4,
+#main-prog-jumbo p{
+    color: white;
+}
+
+/*==============================ジャンボトロン終わり===============================*/
+
+#itc-title{
+    padding:0;
+    padding-top:170px;
+    padding-bottom:100px;
+    background-image: url("../images/carousel3.jfif");
+    color:white;
+}
+
+.headline-title{
+    position:absolute;
+    bottom:0;
+    margin-left:15px;
+}
+    .headline-title > h2 {
+        font-size: 120px;
+        color: rgba(255,255,255,0.5);
+    }
+
+#dtm-headline,
+#cg-headline,
+#prog-headline,
+#link-headline{
+    height: 300px;
+    background-size: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    background-size: auto 1000px;
+}
+
+
+#dtm-headline {
+    background-image: url("../images/DTM-header2.png");
+}
+#cg-headline {
+    background-image: url("../images/CG-header2.png");
+}
+#prog-headline {
+    background-image: url("../images/prog-header2.png");
+}
+#link-headline {
+    background-image: url("../images/link-header.png");
+}
+
+.card-has-caption{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.card-has-caption::after{
+    content: "\f1ea";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:gray;
+}
+
+
+.card-sdw:hover {
+    -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    -ms-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+}
+.jumbotron-sdw:hover {
+    -webkit-filter: drop-shadow(1px 3px 8px rgba(0, 0, 0, 0.2));
+    -moz-filter: drop-shadow(1px 3px 8px rgba(0, 0, 0, 0.2));
+    -ms-filter: drop-shadow(1px 3px 8px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 3px 8px rgba(0, 0, 0, 0.2));
+}
+
+
+/*========================================================================*/
+/*padding-topを設定しないとヘッダー(高さ50px)と被って見えなくなるので*/
+.modal{
+    padding-top: 60px;
+}
